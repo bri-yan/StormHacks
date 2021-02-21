@@ -278,7 +278,7 @@ header .intro-text {
 	padding-right: 8px;
 }
 #about img {
-	width: 520px;
+	width: 250px;
 	margin-top: 10px;
 	background: #fff;
 	border-right: 0;
@@ -615,14 +615,35 @@ color: #777;
 	bottom: -30px
 }
 
-.pictures {
-	display: flex;
-}
-
 .center-button {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+.pictures {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.combined {
+	display: flex;
+	
+}
+/* .pictures1 {
+	display: flex;
+
+}
+.picutres2 {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+} */
+
+.img-responsive {
+	margin: 0 10px;
 }
 
 .indicator {
