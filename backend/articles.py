@@ -70,8 +70,9 @@ class ParsedArticles:
 
         #Demo Suggestions
         ret_sgst = None
-        if "Ben and Jerry's" in self.search_terms:
-            ret_sgst = suggest.suggest("Ben and Jerry's")
+        for term in self.search_terms:
+            if "Ben" in term:
+                ret_sgst = suggest.suggest("Ben and Jerry's")
         if "Nike" in self.search_terms or "nike" in self.search_terms:
             ret_sgst = suggest.suggest("nike")
 
@@ -86,7 +87,7 @@ class ParsedArticles:
 
         
 if __name__ == '__main__':
-    pa = ParsedArticles("Ben and Jerry's", "fair trade")
+    pa = ParsedArticles("Ben&&andasdfasdfaJerry's", "fair trade")
     art = pa.get_article()
     print(art.summary)
     print(pa.get_articles_info())
