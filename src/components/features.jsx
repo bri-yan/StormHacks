@@ -5,6 +5,10 @@ import Searchbar from "./Searchbar";
 import Loading from "./Loading";
 import Rating from "./Rating"
 import Chart from "./Chart"
+import {FacebookShareButton, FacebookIcon} from "react-share";
+import {TwitterShareButton, TwitterIcon} from "react-share";
+import {PinterestShareButton, PinterestIcon} from "react-share";
+import {RedditShareButton, RedditIcon} from "react-share";
 import {
   ThemeProvider,
   DefaultTheme,
@@ -34,6 +38,40 @@ export class features extends Component {
                 <h2>Search</h2>
               </div>
           </div >
+
+          <FacebookShareButton 
+                url={"http://www.facebook.com"}
+                quote={"CampersTribe - World is yours to explore"}
+                hashtag="#camperstribe"
+                className="FacebookButton">
+                 <FacebookIcon size={45} />
+              </FacebookShareButton>
+
+              
+
+          <TwitterShareButton 
+                url={"http://www.twitter.com"}
+                quote={"CampersTribe - World is yours to explore"}
+                hashtag="#camperstribe"
+                className="FacebookButton">
+                 <TwitterIcon size={45} />
+              </TwitterShareButton>
+
+              <PinterestShareButton 
+                url={"http://www.pinterest.com"}
+                quote={"CampersTribe - World is yours to explore"}
+                hashtag="#camperstribe"
+                className="FacebookButton">
+                 <PinterestIcon size={45} />
+              </PinterestShareButton>
+
+              <RedditShareButton 
+                url={"http://www.reddit.com"}
+                quote={"CampersTribe - World is yours to explore"}
+                hashtag="#camperstribe"
+                className="FacebookButton">
+                 <RedditIcon size={45} />
+              </RedditShareButton>
 
           <div className="searchbar">
             <Searchbar
