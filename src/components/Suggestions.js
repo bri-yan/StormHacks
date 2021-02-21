@@ -1,22 +1,30 @@
 import React from "react";
 import { Div, Row, Col } from "react-atomize";
 import SmallCard from "./SmallCard";
-import LongCard from "./LongCard"
 
-function Articles(props) {
+function Suggestions(props) {
+    const data = props.data;
+    const cards = []
+    if (data) {
+        for (const x of data) {
+            cards.push(<SmallCard
+                title={x.title}
+                img={x.img}
+              />  )
+        }
+    } else {
+        cards.push((<SmallCard
+            title="No suggestions at the moment..."
+            img="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2021/01/sorry-for-the-inconvenience.jpg"
+          />))
+        }
   return (
     <Div>
     <Row size="auto" d="flex" p="0rem">
-      <Col size="auto" p="0rem">
-        <SmallCard
-          title="Company Name"
-          img="https://www.newhope.com/sites/newhope360.com/files/styles/article_featured_retina/public/FairTrade-Logo.svg__0.png?itok=RCPYoF2C"
-        />  
-      </Col>
-      
+        {cards}
     </Row>
     </Div>
   );
 }
 
-export default Articles;
+export default Suggestions;
