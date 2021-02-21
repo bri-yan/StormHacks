@@ -12,7 +12,7 @@ import {
   Icon,
 } from "react-atomize";
 
-import {FacebookShareButton, FacebookIcon} from "react-share";
+
 
 export class features extends Component {
   state = {
@@ -31,14 +31,6 @@ export class features extends Component {
                 <h2>Search</h2>
               </div>
           </div >
-
-          {/* <FacebookShareButton 
-                url={"http://www.camperstribe.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className={classes.socialMediaButton}>
-                 <FacebookIcon size={36} />
-              </FacebookShareButton> */}
 
           <div className="searchbar">
             <Searchbar
