@@ -29,12 +29,12 @@ def suggest(text):
         {
             "title": "Patagonia",
             "link" : "https://www.patagonia.com",
-            "img" : "https://images.app.goo.gl/R1sT9ns4fvLUBefz9",
+            "img" : "https://cdn.shopify.com/s/files/1/2143/7011/files/fitsum-admasu-oGv9xIl7DkY-unsplash.jpg?v=1583186866",
         },
         {
             "title": "Yoga Democracy",
             "link" : "https://yogademocracy.com/",
-            "img" : "https://images.app.goo.gl/dFEJjbyZaMgxe3sF8",
+            "img" : "https://cdn.shopify.com/s/files/1/2143/7011/files/yogadem.jpg?v=1583186918",
         },{
             "title": "CotoPaxi",
             "link" : "https://www.cotopaxi.com/",
