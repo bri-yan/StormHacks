@@ -6,12 +6,13 @@
 
     },
     "About": {
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "paragraph": "Our program supports these 4 fair trade certfications shown here: Fair trade, Fair Trade Federation, World Fair Trade Organiation, and Small Producers. There are other fair trade certifications, however these 4 are the mose widely accepted ones, so we can be sure hat any proucts certified by these organizations are fair trade products.",
         "Why": [
-            "Lorem ipsum dolor",
-            "Tempor incididunt",
-            "Lorem ipsum dolor",
-            "Incididunt ut labore"
+            "Fair wages for workers and farmers",
+            "Less child labour",
+            "Promotes environmentally friendly farming practices",
+            "Promotes cooperation among workers and farmers",
+            "Provides funds that farmers and workers can invest in thier cmmunity with"
         ],
         "Why2": [
             "Aliquip ex ea commodo",

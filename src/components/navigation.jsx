@@ -19,7 +19,7 @@ export class Navigation extends Component {
               <span className="icon-bar"></span>{" "}
             </button>
             <a className="navbar-brand page-scroll" href="#page-top">
-              Verify Fair Trade Products
+              Fairify
             </a>{" "}
           </div>
 
@@ -33,11 +33,11 @@ export class Navigation extends Component {
                   Search a product
                 </a>
               </li>
-              {/* <li>
+               <li>
                 <a href="#about" className="page-scroll">
                   About
                 </a>
-              </li> */}
+              </li> 
               {/* <li>
                 <a href="#services" className="page-scroll">
                   Services

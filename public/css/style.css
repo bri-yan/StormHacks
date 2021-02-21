@@ -278,7 +278,7 @@ header .intro-text {
 	padding-right: 8px;
 }
 #about img {
-	width: 520px;
+	width: 250px;
 	margin-top: 10px;
 	background: #fff;
 	border-right: 0;
@@ -619,4 +619,85 @@ color: #777;
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+.pictures {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.combined {
+	display: flex;
+	
+}
+/* .pictures1 {
+	display: flex;
+
+}
+.picutres2 {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+} */
+
+.img-responsive {
+	margin: 0 10px;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+	user-select: none;
+	padding-top: 88;
+}
+.circle-rating{
+	width: 225;
+}
+.circle-text {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.rating-chart {
+	display: flex;
+	justify-content: center;
+}
+
+.small-circle-text {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.small-circle-rating {
+	display: flex;
+}
+
+.small-indicator {
+	display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+	user-select: none;
+	padding-top: 21.2;
+}
+
+.company-name {
+	display: flex;
+	justify-content: center;
+  	align-items: center;
 }
