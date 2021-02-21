@@ -5,6 +5,7 @@ import Searchbar from "./Searchbar";
 import Loading from "./Loading";
 import Rating from "./Rating"
 import Chart from "./Chart"
+import Suggestions from "./Suggestions"
 import {FacebookShareButton, FacebookIcon} from "react-share";
 import {TwitterShareButton, TwitterIcon} from "react-share";
 import {PinterestShareButton, PinterestIcon} from "react-share";
@@ -65,13 +66,21 @@ export class features extends Component {
             }}
             />
           </div>
-
-          {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
-          {(this.state.loading && !this.state.visible) ? <Loading/> : null}
-          {(!this.state.loading && this.state.visible)
           
-          ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
-          {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles} />: null}
+        <div className="botpad">
+            {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
+            {(this.state.loading && !this.state.visible) ? <Loading/> : null}
+          <div className="center-align">
+            {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
+          </div>
+          <div className="center-align">
+            {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles} />: null}
+          </div>
+          <div className="center-align">
+            {(!this.state.loading && this.state.visible) ? <Suggestions data={this.state.suggestions}/>: null}
+          </div>
+        </div>
+          
          </div>
     );
   }

@@ -23,15 +23,15 @@ function Chart(props) {
                 <Text
                     textSize="display3"
                     textWeight="300"
-                    p={{l:"12.5rem", b:"1.8rem", r:"1rem"}}
+                    p={{l:"0rem", b:"1.8rem", r:"1rem"}}
                     m={{r:'10rem'}}
                 >
                     Company: <Text textSize="display3"
                     textWeight="500">{props.company}</Text>
                 </Text>
             </div>
-            <Col size="2">
-                <Div p={{l:"1rem"}}>
+            <Col size="3">
+                <Div m={{l:"1rem", r:"6rem"}}>
                     <Rating rating={ftr} color="#1FB7EA" text="Fair Trade Rating"/> 
                 </Div>
             </Col>
