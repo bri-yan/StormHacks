@@ -5,6 +5,7 @@ from purl import URL
 from newspaper import Article
 from googlesearch import search
 import sentiment
+import suggest, certs
 
 WEB_SCHEME = "https"
 GOOGLE = {'url':'www.google.com',
@@ -66,12 +67,26 @@ class ParsedArticles:
             ret_art_inf.append(art_info)
         sg = sentiment.SentimentGleaner(sum_txt)
         ret_scr = sg.get_scores()
-        ret = {"articles": ret_art_inf, "scores": ret_scr}
+
+        #Demo Suggestions
+        ret_sgst = None
+        if "Ben and Jerry's" in self.search_terms:
+            ret_sgst = suggest.suggest("Ben and Jerry's")
+        if "Nike" in self.search_terms or "nike" in self.search_terms:
+            ret_sgst = suggest.suggest("nike")
+
+        print(self.search_terms)
+        c = certs.Certifications(self.search_terms[0])
+        ret_certs = c.get_certs()
+        
+        ret = {"articles": ret_art_inf, "scores": ret_scr, 
+            "suggestions": ret_sgst, "certifications": ret_certs}
+
         return ret
 
         
 if __name__ == '__main__':
-    pa = ParsedArticles("nike", "fair trade")
+    pa = ParsedArticles("Ben and Jerry's", "fair trade")
     art = pa.get_article()
     print(art.summary)
     print(pa.get_articles_info())
