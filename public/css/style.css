@@ -670,6 +670,7 @@ color: #777;
 .rating-chart {
 	display: flex;
 	justify-content: center;
+	padding-bottom: 4rem;
 }
 
 .small-circle-text {
@@ -702,3 +703,7 @@ color: #777;
   	align-items: center;
 }
 
+.rating-chart {
+	align-items: center;
+	padding-left: 13.8rem;
+}

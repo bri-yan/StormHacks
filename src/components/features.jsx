@@ -22,7 +22,9 @@ export class features extends Component {
   state = {
     visible: false,
     loading: false,
-    articles: ""
+    dashboard_load: false,
+    articles: "",
+    company: ""
   }
 
 
@@ -86,11 +88,13 @@ export class features extends Component {
                       console.log(this.state.articles[0].title)
                       this.setState({ visible: true });
                       this.setState({ loading: false });
+                      this.setState({ company: e.target.value})
                     }))
                   
                 } else {
                   this.setState({ visible: false })
                   this.setState({ loading: true })
+                  this.setState({ dashboard_load: true })
                 }
                 console.log("visible: " + this.state.visible + "\nloading: " + this.state.loading)
             }}
@@ -98,8 +102,9 @@ export class features extends Component {
           </div>
           {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
           {(this.state.loading && !this.state.visible) ? <Loading/> : null}
-          {(!this.state.loading && this.state.visible) ? <Chart/>: <Chart/>}
+          {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} ftr={0} smr={0} ppi={0} sas={0}/>: null}
           {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles}/>: null}
+          
         </div>
     );
   }

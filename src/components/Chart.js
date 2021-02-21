@@ -18,27 +18,31 @@ function Chart(props) {
                 <Text
                     textSize="display3"
                     textWeight="300"
+                    p={{l:"17rem", b:"1.8rem", r:"1rem"}}
+                    m={{r:'10rem'}}
                 >
-                    Company Name
+                    Company: <Text textSize="display3"
+                    textWeight="500">{props.company}</Text>
                 </Text>
             </div>
             <Col size="2">
                 <Div p={{l:"1rem"}}>
-                    <Rating rating={82} color="#1FB7EA" text="Fair Trade Rating"/> 
+                    <Rating rating={props.ftr} color="#1FB7EA" text="Fair Trade Rating"/> 
                 </Div>
             </Col>
             <Col>
-                <Row>
-                    <SmallRating rating={67} color="#EF476F" text="Social Media Rating"/> 
-                </Row>
-                <Row>
-                    <SmallRating rating={67} color="#FFD166" text="Positivity-Polarization Index"/> 
-                </Row>
-                <Row>
-                    <SmallRating rating={67} color="#06D6A0" text="Sentiment & Awareness Score"/> 
-                </Row>
+                <Div p={{b:"2.2rem"}}>
+                    <Row>
+                        <SmallRating rating={props.smr} color="#EF476F" text="Social Media Rating"/> 
+                    </Row>
+                    <Row>
+                        <SmallRating rating={props.ppi} color="#FFD166" text="Positivity-Polarization Index"/> 
+                    </Row>
+                    <Row>
+                        <SmallRating rating={props.sas} color="#06D6A0" text="Sentiment & Awareness Score"/> 
+                    </Row>
+                </Div>
             </Col>
-            
         </div>
     )
 }
