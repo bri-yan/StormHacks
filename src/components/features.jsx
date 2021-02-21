@@ -24,7 +24,8 @@ export class features extends Component {
     loading: false,
     dashboard_load: false,
     articles: "",
-    company: ""
+    company: "",
+    scores: "",
   }
 
 
@@ -53,10 +54,10 @@ export class features extends Component {
                     response.json().then(data => {
                       console.log(data);
                       this.setState({ articles: data.articles });
-                      console.log(this.state.articles[0].title)
                       this.setState({ visible: true });
                       this.setState({ loading: false });
                       this.setState({ company: e.target.value})
+                      this.setState({ scores: data.scores })
                     }))
                   
                 } else {
@@ -70,8 +71,8 @@ export class features extends Component {
           </div>
           {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
           {(this.state.loading && !this.state.visible) ? <Loading/> : null}
-          {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} ftr={0} smr={0} ppi={0} sas={0}/>: null}
-          {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles}/>: null}
+          {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
+          {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles} />: null}
           
         </div>
     );

@@ -181,10 +181,10 @@ class SentimentGleaner:
     
     def get_scores(self):
         
-        return {"sentiment and awareness reasoning score" : self.vader_stm, 
-                "positivity and polarisation score" : self.positivity_stm,
-                "social media rating" : self.sm_stm,
-                "overall score" : self.overall_score}
+        return {"sas" : self.vader_stm, 
+                "ppi" : self.positivity_stm,
+                "smr" : self.sm_stm,
+                "ftr" : self.overall_score}
 
     
 if __name__ == "__main__":
