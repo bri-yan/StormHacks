@@ -607,9 +607,16 @@ color: #777;
 	justify-content: center;
 	text-align: center;
 	padding-top: 0;
-	top: -105px;
+	padding-bottom: 60px;
+	padding-right: 8px;
 }
 
 .col-md-10 {
 	bottom: -30px
+}
+
+.center-button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
