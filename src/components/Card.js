@@ -26,25 +26,6 @@ function Card(props) {
                     textColor="warning500"
                     p="1rem"
                 >
-                    <Button
-                        prefix={
-                        <Icon
-                            name="Alert"
-                            size="16px"
-                            color="white"
-                            m={{ r: "0.5rem" }}
-                        />
-                        }
-                        bg="warning700"
-                        hoverBg="warning800"
-                        rounded="circle"
-                        p={{ r: "1.5rem", l: "1rem" }}
-                        shadow="3"
-                        hoverShadow="4"
-                        cursor="default"
-                    >
-                       Lorem Ipsum
-                    </Button>
                 </Div>
                 <Div
                     w="26.65rem"
