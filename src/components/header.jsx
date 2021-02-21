@@ -20,16 +20,17 @@ export class Header extends Component {
                   </p>
                   <div className="center-button">
                     <Button
-                      h="3.5rem"
+                      h="3.2rem"
                       w="10rem"
                       p={{ x: "1.25rem" }}
                       textSize="body"
-                      hoverTextColor="light"
-                      hoverBg="dark"
+                      hoverTextColor="white"
+                      hoverBg="info800"
+                      bg="info700"
                       m={{ r: "0.5rem" }}
                     
                       rounded="circle"
-                      onClick={() => scrollTo('#features')}
+                      onClick={() => scrollTo('#features', 0, 0, 1000)}
                     >
                       TRY IT OUT
                     </Button>

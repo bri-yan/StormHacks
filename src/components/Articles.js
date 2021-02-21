@@ -3,7 +3,7 @@ import { Div, Row, Col } from "react-atomize";
 import Card from "./Card";
 import LongCard from "./LongCard"
 
-function Articles() {
+function Articles(props) {
   return (
     <Div>
     <Row size="auto" d="flex" p="0rem">

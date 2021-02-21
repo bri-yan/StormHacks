@@ -22,20 +22,12 @@ class SearchLoading extends React.Component {
             textWeight="500"
             placeholder="Search a product and/or company"
             rounded="circle"
-            onKeyPress={(e) => {
-                if (e.key === "Enter") {
-                    console.log(e.target.value);
-                    this.setState({ isLoading: false });
-                } else {
-                    this.setState({ isLoading: true });
-                }
-            }}
+            onKeyPress={this.props.onKeyPress}
             suffix={
             <Button
                 pos="absolute"
                 onClick={(e) => {
                         this.setState({ isLoading: !isLoading });
-                        console.log(Input.e)
                     }
                 }
                 bg="transparent"
