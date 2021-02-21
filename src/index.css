@@ -16,20 +16,21 @@ code {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: F4F5F7;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: F4F5F7;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: F4F5F7;
-}
+  width: 0px;
+  height:0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #ffffff00;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #ffffff00;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #ffffff00;
+  }
