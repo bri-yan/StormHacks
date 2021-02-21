@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS, cross_origin
 import articles
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def get_articles(search_terms, num_articles):
   pa = articles.ParsedArticles(*search_terms.split(","))
   arts = pa.get_articles_info(num_art=num_articles)
   print(arts)
-  return arts
+  return jsonify(arts)
 
 if __name__ == "__main__":
     app.run(debug=True)

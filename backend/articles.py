@@ -57,9 +57,12 @@ class ParsedArticles:
 
     def get_articles_info(self, num_art=1):
         self.parse_articles(num_art)
+        ret_inf = []
         for a in self.articles:
             art_info = {"url": a.url, "title":a.title, "summary": a.summary, "img":a.top_image}
-        return art_info.copy()
+            art_info.copy()
+            ret_inf.append(art_info)
+        return ret_inf
 
         
 if __name__ == '__main__':
