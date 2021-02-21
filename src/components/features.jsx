@@ -38,39 +38,7 @@ export class features extends Component {
               </div>
           </div >
 
-          <FacebookShareButton 
-                url={"http://www.facebook.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <FacebookIcon size={45} />
-              </FacebookShareButton>
-
-              
-
-          <TwitterShareButton 
-                url={"http://www.twitter.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <TwitterIcon size={45} />
-              </TwitterShareButton>
-
-              <PinterestShareButton 
-                url={"http://www.pinterest.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <PinterestIcon size={45} />
-              </PinterestShareButton>
-
-              <RedditShareButton 
-                url={"http://www.reddit.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <RedditIcon size={45} />
-              </RedditShareButton>
+   
 
           <div className="searchbar">
             <Searchbar
