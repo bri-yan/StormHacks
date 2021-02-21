@@ -43,7 +43,7 @@ class ParsedArticles:
             self.articles.append(article)
             article.download()
             article.parse()
-            nltk.download('punkt')
+            # nltk.download('punkt')
             article.nlp()
     
     def get_article(self):
