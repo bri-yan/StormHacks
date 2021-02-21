@@ -1,6 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 from purl import URL
+from unidecode import unidecode
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
+}
 
 WEB_SCHEME = "https"
 CERT_ORGS = {"fair trade federation" : 
@@ -15,7 +20,7 @@ class Certifications:
         self.company_name = company_name
         self.certifications = {}
         self.certifications["fair trade federation"] = self.search_fair_trade_federation()
-        self.certifications["SPP, Small Producers' Symbol"] = self.search_spp
+        self.certifications["SPP, Small Producers' Symbol"] = self.search_spp()
 
     def search_spp(self):
         org_info = CERT_ORGS["SPP"]
@@ -23,12 +28,14 @@ class Certifications:
                     host = org_info["url"], 
                     path = org_info["search_path"])
         print(url)
-        source = requests.get(url)
+        source = requests.get(url, headers=HEADERS)
         page = BeautifulSoup(source.content, 'html.parser')
         search_results = page.find_all(class_='slide-entry')
-        print(search_results)
         for sr in search_results:
-            print(sr.prettify())
+            result_name = sr.get('data-avia-tooltip')
+            if self.is_company(result_name):
+                return True
+        return False
 
     def search_fair_trade_federation(self):
         org_info = CERT_ORGS["fair trade federation"]
@@ -40,14 +47,20 @@ class Certifications:
         page = BeautifulSoup(source.content, 'html.parser')
         search_results = page.find_all(class_='members-box')
         for sr in search_results:
-            result_names = sr.mark.text
+            result_name = sr.mark.text
             # print(sr.h3.text)
-            if result_names == self.company_name:
+            if self.is_company(result_name):
                 return True
         return False
     
     def get_certs(self): 
-        return self.certifications
+        return self.certifications.copy()
 
-cert = Certifications("Gallant International")
-print(cert.get_certs())
+    def is_company(self, co):
+        return unidecode(co).lower() == unidecode(self.company_name).lower()
+
+if __name__ == '__main__':
+    cert = Certifications("Gallant International")
+    print(cert.get_certs())
+    cert = Certifications("biocafe")
+    print(cert.get_certs())
