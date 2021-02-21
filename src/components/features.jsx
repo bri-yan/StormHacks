@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Articles from "./Articles";
 import Empty from "./Empty";
 import Searchbar from "./Searchbar";
 import Loading from "./Loading";
-import {FacebookShareButton, FacebookIcon} from "react-share";
+import Rating from "./Rating"
+import Chart from "./Chart"
 import {
   ThemeProvider,
   DefaultTheme,
@@ -11,12 +12,13 @@ import {
   Icon,
 } from "react-atomize";
 
-
+import {FacebookShareButton, FacebookIcon} from "react-share";
 
 export class features extends Component {
   state = {
     visible: false,
-    loading: false
+    loading: false,
+    articles: ""
   }
 
 
@@ -45,11 +47,18 @@ export class features extends Component {
                   this.setState({ visible: false})
                   this.setState({loading: false})
                 } else if (e.key === "Enter") {
-                  this.setState({ visible: true });
                   this.setState({loading: true})
                   console.log(e.target.value)
+                  fetch("/articles/" + e.target.value + ",fairtrade/6").then(response => 
+                    response.json().then(data => {
+                      console.log(data);
+                      this.setState({ articles: data.articles });
+                      console.log(this.state.articles[0].title)
+                      this.setState({ visible: true });
+                      this.setState({ loading: false });
+                    }))
+                  
                 } else {
-                  console.log(e.key)
                   this.setState({ visible: false })
                   this.setState({ loading: true })
                 }
@@ -57,7 +66,10 @@ export class features extends Component {
             }}
             />
           </div>
-          {x}
+          {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
+          {(this.state.loading && !this.state.visible) ? <Loading/> : null}
+          {(!this.state.loading && this.state.visible) ? <Chart/>: <Chart/>}
+          {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles}/>: null}
         </div>
     );
   }

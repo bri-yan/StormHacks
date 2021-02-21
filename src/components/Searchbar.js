@@ -39,7 +39,7 @@ class SearchLoading extends React.Component {
                 <Icon
                 name={isLoading ? "Loading" : "Search"}
                 color={isLoading ? "gray900" : "black"}
-                size="16px"
+                size="20px"
                 />
             </Button>
             }
