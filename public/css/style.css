@@ -705,5 +705,25 @@ color: #777;
 
 .rating-chart {
 	align-items: center;
-	padding-left: 13.8rem;
+	padding-left: 6rem;
+}
+
+.center-align {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.img-responsive, .pictures1 {
+	background: transparent;
+	background-color: transparent;
+}
+
+.botpad {
+	padding-bottom: 5rem;
+	margin-bottom: 20rem;
+}
+
+#about {
+	padding-top: 19rem;
 }
