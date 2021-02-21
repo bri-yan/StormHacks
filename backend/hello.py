@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS, cross_origin
-import articles
+import articles, certs
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -17,6 +17,11 @@ def get_articles(search_terms, num_articles):
   arts = pa.get_articles_info(num_art=num_articles)
   print(arts)
   return jsonify(arts)
+
+@app.route("/certifications/<company>")
+def certifications(company):
+  crts = certs.Certifications(company)
+  return crts.get_certs()
 
 if __name__ == "__main__":
     app.run(debug=True)
