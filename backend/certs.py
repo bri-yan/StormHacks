@@ -21,6 +21,10 @@ class Certifications:
         self.certifications = {}
         self.certifications["fair trade federation"] = self.search_fair_trade_federation()
         self.certifications["SPP, Small Producers' Symbol"] = self.search_spp()
+        #Demo for Hidden Cert Database
+        if company_name not in ['Nike', 'nike']:
+            self.certifications["FairTade"] = True
+            self.certifications["World Fair Trade Organization"] = True
 
     def search_spp(self):
         org_info = CERT_ORGS["SPP"]
