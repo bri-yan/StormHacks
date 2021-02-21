@@ -12,7 +12,7 @@ export class about extends Component {
             <div className="combined">
             <div className = "pictures1">
             <a href="https://fairtrade.ca/">
-            <img src="img/about1.jpg" className="img-responsive" alt=""/>
+            <img src="img/about1.png" className="img-responsive" alt=""/>
             </a>
             <a href="https://wfto.com/">
             <img src="img/about3.jpg" className="img-responsive" alt=""/>
