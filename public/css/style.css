@@ -278,7 +278,7 @@ header .intro-text {
 	padding-right: 8px;
 }
 #about img {
-	width: 520px;
+	width: 250px;
 	margin-top: 10px;
 	background: #fff;
 	border-right: 0;
@@ -622,4 +622,22 @@ color: #777;
 }
 .pictures {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.combined {
+	display: flex;
+	
+}
+/* .pictures1 {
+	display: flex;
+
+}
+.picutres2 {
+	display: flex;
+
+} */
+
+.img-responsive {
+	margin: 0 10px;
 }
