@@ -4,14 +4,11 @@ from bs4 import BeautifulSoup
 from purl import URL
 from newspaper import Article
 from googlesearch import search
+import sentiment
 
 WEB_SCHEME = "https"
 GOOGLE = {'url':'www.google.com',
         'search_path':'/search'}
-# desktop user-agent
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:65.0) Gecko/20100101 Firefox/65.0"
-# mobile user-agent
-MOBILE_USER_AGENT = "Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36"
 
 class ParsedArticles:
     def __init__(self, *args, url=None):
@@ -57,15 +54,21 @@ class ParsedArticles:
 
     def get_articles_info(self, num_art=1):
         self.parse_articles(num_art)
-        ret_inf = []
+        ret_art_inf = []
+        sum_txt = ""
         for a in self.articles:
+            sum_txt += ". " + a.text
             art_info = {"url": a.url, "title":a.title, "summary": a.summary, "img":a.top_image}
             art_info.copy()
-            ret_inf.append(art_info)
-        return ret_inf
+            ret_art_inf.append(art_info)
+        sg = sentiment.SentimentGleaner(sum_txt)
+        ret_scr = sg.get_scores()
+        ret = {"articles": ret_art_inf, "scores": ret_scr}
+        return ret
 
         
 if __name__ == '__main__':
     pa = ParsedArticles("nike", "fair trade")
     art = pa.get_article()
     print(art.summary)
+    print(pa.get_articles_info())
