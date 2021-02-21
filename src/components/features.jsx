@@ -27,6 +27,7 @@ export class features extends Component {
     articles: "",
     company: "",
     scores: "",
+    suggestions: "",
   }
 
 
@@ -56,6 +57,7 @@ export class features extends Component {
                       this.setState({ loading: false });
                       this.setState({ company: e.target.value})
                       this.setState({ scores: data.scores })
+                      this.setState({ suggestions: data.suggestions })
                     }))
                 } else {
                   this.setState({ visible: false })
