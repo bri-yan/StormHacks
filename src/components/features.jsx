@@ -52,12 +52,13 @@ export class features extends Component {
                   fetch("/articles/" + e.target.value + ",fairtrade/6").then(response => 
                     response.json().then(data => {
                       console.log(data);
+                      this.setState({ suggestions: data.suggestions })
                       this.setState({ articles: data.articles });
                       this.setState({ visible: true });
                       this.setState({ loading: false });
                       this.setState({ company: e.target.value})
                       this.setState({ scores: data.scores })
-                      this.setState({ suggestions: data.suggestions })
+                      
                     }))
                 } else {
                   this.setState({ visible: false })
