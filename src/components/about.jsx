@@ -6,7 +6,19 @@ export class about extends Component {
         <div id="about">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-md-6"> <img src="img/about.jpg" className="img-responsive" alt=""/> </div>
+          
+            
+            <div className="pictures">
+            <a href="https://fairtrade.ca/">
+            <div className="col-xs-12 col-md-3"> <img src="img/about1.jpg" className="img-responsive" alt=""/> </div>
+            </a>
+            <a href="https://www.fairtradefederation.org/">
+            <div className="col-xs-12 col-md-3"> <img src="img/about2.jpg" className="img-responsive" alt=""/> </div>
+            </a>
+            <a href="https://wfto.com/">
+            <div className="col-xs-12 col-md-3"> <img src="img/about3.jpg" className="img-responsive" alt=""/> </div>
+            </a>
+            </div>
             <div className="col-xs-12 col-md-6">
               <div className="about-text">
                 <h2>About Us</h2>

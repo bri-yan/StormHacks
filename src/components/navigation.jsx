@@ -33,11 +33,11 @@ export class Navigation extends Component {
                   Search a product
                 </a>
               </li>
-              {/* <li>
+               <li>
                 <a href="#about" className="page-scroll">
                   About
                 </a>
-              </li> */}
+              </li> 
               {/* <li>
                 <a href="#services" className="page-scroll">
                   Services

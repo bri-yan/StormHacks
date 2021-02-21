@@ -613,3 +613,7 @@ color: #777;
 .col-md-10 {
 	bottom: -30px
 }
+
+.pictures {
+	display: flex;
+}
