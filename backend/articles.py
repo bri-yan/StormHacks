@@ -70,8 +70,10 @@ class ParsedArticles:
 
         #Demo Suggestions
         ret_sgst = None
-        if "Ben and Jerry's" in self.search_terms:
-            ret_sgst = suggest.suggest("Ben and Jerry's")
+        for term in self.search_terms:
+            if "Ben" in term or "ben" in term:
+                self.search_terms = [("Ben and Jerry's")]
+                ret_sgst = suggest.suggest("Ben and Jerry's")
         if "Nike" in self.search_terms or "nike" in self.search_terms:
             ret_sgst = suggest.suggest("nike")
 
