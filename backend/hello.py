@@ -16,11 +16,11 @@ def test():
 @app.route('/articles/<search_terms>/<int:num_articles>')
 def get_articles(search_terms, num_articles):
   if search_terms in cache:
-    return jsonify({"articles": cache[search_terms]})
+    return cache[search_terms]
   pa = articles.ParsedArticles(*search_terms.split(","))
-  arts = pa.get_articles_info(num_art=num_articles)
-  cache[search_terms] = arts
-  return jsonify({"articles": arts})
+  info = pa.get_articles_info(num_art=num_articles)
+  cache[search_terms] = info
+  return info
 
 @app.route("/certifications/<company>")
 def certifications(company):
