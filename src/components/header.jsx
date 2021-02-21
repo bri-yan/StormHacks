@@ -22,7 +22,7 @@ export class Header extends Component {
                     
                     className="btn btn-custom btn-lg page-scroll"  
                   >
-                    Learn More
+                    Try It Out
                   </a>{" "}
                 </div>
               </div>

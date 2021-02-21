@@ -20,7 +20,7 @@ class SearchLoading extends React.Component {
             <Input
             bg="white"
             textWeight="500"
-            placeholder="Search"
+            placeholder="Search a product and/or company"
             rounded="circle"
             onKeyPress={(e) => {
                 if (e.key === "Enter") {
