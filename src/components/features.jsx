@@ -30,48 +30,13 @@ export class features extends Component {
 
 
   render() {
-    let x = this.state.visible ? <Articles/> : (this.state.loading ? <Loading/> : <Empty/>)
     return (
         <div>
           <div id="features" className="text-center">
               <div className="col-md-10 col-md-offset-1 section-title">
                 <h2>Search</h2>
               </div>
-          </div >
-
-          <FacebookShareButton 
-                url={"http://www.facebook.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <FacebookIcon size={45} />
-              </FacebookShareButton>
-
-              
-
-          <TwitterShareButton 
-                url={"http://www.twitter.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <TwitterIcon size={45} />
-              </TwitterShareButton>
-
-              <PinterestShareButton 
-                url={"http://www.pinterest.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <PinterestIcon size={45} />
-              </PinterestShareButton>
-
-              <RedditShareButton 
-                url={"http://www.reddit.com"}
-                quote={"CampersTribe - World is yours to explore"}
-                hashtag="#camperstribe"
-                className="FacebookButton">
-                 <RedditIcon size={45} />
-              </RedditShareButton>
+          </div>
 
           <div className="searchbar">
             <Searchbar
@@ -91,7 +56,6 @@ export class features extends Component {
                       this.setState({ company: e.target.value})
                       this.setState({ scores: data.scores })
                     }))
-                  
                 } else {
                   this.setState({ visible: false })
                   this.setState({ loading: true })
@@ -101,12 +65,12 @@ export class features extends Component {
             }}
             />
           </div>
+          
           {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
           {(this.state.loading && !this.state.visible) ? <Loading/> : null}
           {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
           {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles} />: null}
-          
-        </div>
+         </div>
     );
   }
 }
