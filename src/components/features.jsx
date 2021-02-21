@@ -65,10 +65,12 @@ export class features extends Component {
             }}
             />
           </div>
-          
+
           {(!this.state.loading && !this.state.visible) ? <Empty/> : null}
           {(this.state.loading && !this.state.visible) ? <Loading/> : null}
-          {(!this.state.loading && this.state.visible) ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
+          {(!this.state.loading && this.state.visible)f
+          
+          ? <Chart company={this.state.company} scores={this.state.scores}/>: null}
           {(!this.state.loading && this.state.visible) ? <Articles data={this.state.articles} />: null}
          </div>
     );
