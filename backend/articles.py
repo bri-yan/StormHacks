@@ -57,10 +57,10 @@ class ParsedArticles:
         ret_art_inf = []
         sum_txt = ""
         for a in self.articles:
-            sum_txt += ". " + a.text
+            sum_txt += ". " + a.summary
             art_info = {"url": a.url, 
                         "title":a.title, 
-                        "summary": a.summary[:325] + " ...", 
+                        "summary": a.summary[:310] + " ...", 
                         "img":a.top_image}
             art_info.copy()
             ret_art_inf.append(art_info)
