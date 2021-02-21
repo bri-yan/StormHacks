@@ -72,12 +72,13 @@ class ParsedArticles:
         ret_sgst = None
         for term in self.search_terms:
             if "Ben" in term:
-                ret_sgst = suggest.suggest("Ben and Jerry's")
+                search_terms = "Ben and Jerry's"
+                ret_sgst = suggest.suggest(search_terms)
         if "Nike" in self.search_terms or "nike" in self.search_terms:
             ret_sgst = suggest.suggest("nike")
 
         print(self.search_terms)
-        c = certs.Certifications(self.search_terms[0])
+        c = certs.Certifications(search_terms)
         ret_certs = c.get_certs()
         
         ret = {"articles": ret_art_inf, "scores": ret_scr, 

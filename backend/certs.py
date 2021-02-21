@@ -64,7 +64,7 @@ class Certifications:
         return unidecode(co).lower() == unidecode(self.company_name).lower()
 
 if __name__ == '__main__':
-    cert = Certifications("Gallant International")
-    print(cert.get_certs())
-    cert = Certifications("biocafe")
+    # cert = Certifications("Gallant International")
+    # print(cert.get_certs())
+    cert = Certifications("Ben")
     print(cert.get_certs())
