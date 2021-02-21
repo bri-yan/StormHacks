@@ -615,13 +615,11 @@ color: #777;
 	bottom: -30px
 }
 
-<<<<<<< HEAD
-.pictures {
-	display: flex;
-=======
 .center-button {
 	width: 100%;
 	display: flex;
 	justify-content: center;
->>>>>>> 094c73e072d45e54216d997067ba053e89de50f2
+}
+.pictures {
+	display: flex;
 }
