@@ -50,11 +50,9 @@ class Certifications:
         source = requests.get(url)
         page = BeautifulSoup(source.content, 'html.parser')
         search_results = page.find_all(class_='members-box')
+
         for sr in search_results:
-            result_name = sr.mark.text
-            # print(sr.h3.text)
-            if self.is_company(result_name):
-                return True
+            return True
         return False
     
     def get_certs(self): 
