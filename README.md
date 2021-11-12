@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# **fairify** | StormHacks 2021 1st Place 
+### YouTube Presentaion
+https://www.youtube.com/watch?v=fKlYTX6X1uY
+### HackHub Submission
+https://event.hackhub.com/event/stormhacks_2021/submissions/4828
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducing **fairify**
+![slide1](https://i.imgur.com/v5f8DMo.jpg)
+This is **fairify**, our team’s submission for StormHacks 2021.
+## What's The Issue
+![slide2](https://i.imgur.com/TQr0WxL.png)
+In an increasingly complex world, unethical and unfair practices are becoming harder to identify, while honest businesses are struggling to stand out against all the insincere marketing of big corporations (also known as fairwashing). 
 
-## Available Scripts
+It feels like every day there’s another uncovered secret about a brand or product whose unethical practices have long gone under my radar.
+## Big Question 1
+![slide3](https://i.imgur.com/ayu12bL.png)
+So naturally, we found ourselves looking into fair-trade, an arrangement designed to help producers in growing countries achieve sustainable and equitable trade relationships. 
 
-In the project directory, you can run:
+By connecting a diverse group of producers, companies, and consumers, the powerful fair trade movement is able to help everyone do what is right for families, fellow global citizens, and the planet.
+## Big Question 2
+![slide4](https://i.imgur.com/OVM6Aep.png)
+And this led us to the question, how do we shop ethically and sustainably? 
 
-### `npm start`
+The answer is by voting with our money for responsible companies and products that have fair trade certifications from major organisations, and a great community reputation. However, as there are many companies that actively take part in “fairwashing”, is there a way we could easily, conveniently and accurately determine whether a product is ethically produced?
+## Our Solution
+![slide5](https://i.imgur.com/nCyBfo4.png)
+Presenting fairify, your go-to platform for everything fair-trade. By providing you with compiled fair-trade certifications, related news articles, and easily understandable metrics, you can support and share ethical and sustainable practices with ease.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![slide6](https://i.imgur.com/LdGBCli.png)
+Our fair trade composite rating is compiled using four metrics. Number one, a reputation score computed based on a company’s the online communities review. Number two, a fair trade news score gleaned articles scraped from reliable sources and analysed with our natural language processing toolkit. Number three, a sentiment index calculated based on a evidence of a companies efforts to support fair trade. And four, a lookup of a company’s fair trade certificates from related databases.
