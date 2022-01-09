@@ -1,4 +1,4 @@
-# **fairify** | StormHacks 2021 1st Place 
+# **fairify** 🍃 | StormHacks 2021 1st Place 
 ![slide1](https://i.imgur.com/v5f8DMo.jpg)
 
 ### YouTube Presentaion
